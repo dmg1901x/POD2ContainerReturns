@@ -5,7 +5,7 @@ import java.lang.IllegalArgumentException;
  */
 public class Container {
     public Container(String s, boolean empty) { //Constructor
-        if (s == null) {
+        if ((s == null) || (s=="")) {
             throw new IllegalArgumentException("The Container Must Have a Shape");
         }
         shape = s;

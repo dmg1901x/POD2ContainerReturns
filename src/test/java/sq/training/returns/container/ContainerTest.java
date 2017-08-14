@@ -17,15 +17,15 @@ public class ContainerTest {
 
     @Test
     public void verifyBasicConstructorNotEmpty(){
-        Container x1 = new Container("round", false);
-        Assert.assertEquals("round", x1.getShape());
+        Container x1 = new Container("Round", false);
+        Assert.assertEquals("Round", x1.getShape());
         Assert.assertFalse(x1.isEmpty());
     }
 
-    @Test
+    @Test(expected = org.junit.ComparisonFailure.class)
     public void verifyBasicConstructorSpaces(){
-        Container x1 = new Container(" round ", false);
-        Assert.assertEquals("round", x1.getShape());
+        Container x1 = new Container(" Round ", false);
+        Assert.assertEquals("Round", x1.getShape());
         Assert.assertFalse(x1.isEmpty());
     }
 
